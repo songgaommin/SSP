@@ -51,8 +51,6 @@ public class tankFrame extends Frame{
 				y+=SPEED;
 				break;	 
 		   }//根据方向移动坦克
-		 //x+=10;
-		 //y+=10;
 		   	 }
 
 	     class MyKeyListener extends KeyAdapter{
@@ -66,7 +64,7 @@ public class tankFrame extends Frame{
 	    	 @Override			
 	    	 public void keyPressed(KeyEvent e) {
 	    		 int key = e.getKeyCode();
-		    		switch (key) {
+		    		switch (key) {//判断被按下的是哪个键
 					case KeyEvent.VK_LEFT:
 						bL = true;		 
 						break;
@@ -91,7 +89,7 @@ public class tankFrame extends Frame{
 			@Override
 			public void keyReleased(KeyEvent e) {
 		    		 int key = e.getKeyCode();
-			    		switch (key) {//判断被按下的是哪个键
+			    		switch (key) {//被按下的键恢复
 						case KeyEvent.VK_LEFT:
 							bL = false;		 
 							break;
